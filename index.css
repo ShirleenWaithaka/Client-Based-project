@@ -1951,7 +1951,7 @@ input, select, textarea {
 				}
 
 				#nav ul li:hover a, #nav ul li:hover span {
-					background: grey;
+					background: white;
 				}
 
 				#nav ul li.active a, #nav ul li.active span {
