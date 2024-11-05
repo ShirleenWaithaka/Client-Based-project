@@ -2641,72 +2641,102 @@ input, select, textarea {
 			}
 
     	}	  
-		@media (min-width: 768px) {
-			#banner .row {
-				flex-direction: row;
-			}
-		
-			#features-wrapper .container .row {
-				flex-direction: row;
-			}
-		
-			#nav {
-				justify-content: space-between;
-			}
-		
-			#footer-wrapper .row {
-				display: flex;
-				justify-content: space-between;
-			}
-		
-			.col-4 {
-				flex: 1;
-			}
-		
-			#logo img {
-				max-width: 200px;
-			}
-		}
-		
-		/* Desktops (1024px and above) */
-		@media (min-width: 1024px) {
-			#nav ul {
-				gap: 30px;
-			}
-		
-			.col-4 {
-				flex: 0 0 30%;
-			}
-		
-			.col-8 {
-				flex: 0 0 65%;
-			}
-		
-			#banner .col-7 {
-				flex: 2;
-			}
-		
-			#footer-wrapper .row {
-				display: flex;
-				justify-content: space-between;
-			}
-		
-			.widget {
-				margin-bottom: 2em;
-			}
-		}
-		
-		/* Extra large screens (1600px and above) */
-		@media (min-width: 1600px) {
-			#logo img {
-				max-width: 250px;
-			}
-		
-			.col-4 {
-				flex: 0 0 22%;
-			}
-		
-			.col-8 {
-				flex: 0 0 72%;
-			}
-		}
+		/* Mobile navigation */
+nav#nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    background-color: #333;
+}
+
+nav#nav ul li {
+    text-align: center;
+    padding: 10px;
+}
+
+nav#nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    /* Horizontal navigation for larger screens */
+    nav#nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox container for rows */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* Default col-4 styling for small screens */
+.col-4 {
+    flex: 1 0 100%; /* Full width by default (for mobile) */
+    padding: 15px;
+}
+
+/* For medium devices (tablets), show 3 columns */
+@media (min-width: 768px) {
+    .col-4 {
+        flex: 1 0 33.33%;
+    }
+}
+
+/* For larger devices (desktops), adjust column layout */
+@media (min-width: 1024px) {
+    .col-4 {
+        flex: 1 0 33.33%;
+    }
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust text and layout for the banner */
+#banner-wrapper .row {
+    justify-content: center;
+    text-align: center;
+}
+
+/* Adjust footer layout */
+#footer-wrapper .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    #footer-wrapper .col-3 {
+        flex: 1 0 100%; /* Make footer items stack vertically on small screens */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Centering logo in header for mobile */
+#logo img {
+    width: 100%;
+    max-width: 200px;
+}
+
+@media (min-width: 768px) {
+    #logo img {
+        max-width: 250px;
+    }
+}
