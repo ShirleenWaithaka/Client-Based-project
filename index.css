@@ -2640,4 +2640,24 @@ input, select, textarea {
 				text-align: left;
 			}
 
-    	}	        
+    	}	  
+		/* Default styles (mobile-first) */
+body {
+	font-size: 14px;
+	padding: 10px;
+  }
+  
+  /* Styles for tablets */
+  @media (min-width: 768px) {
+	body {
+	  font-size: 16px;
+	}
+  }
+  
+  /* Styles for desktops */
+  @media (min-width: 1024px) {
+	body {
+	  font-size: 18px;
+	}
+  }
+		
