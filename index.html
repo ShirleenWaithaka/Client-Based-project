@@ -23,6 +23,10 @@
 
 						<!-- Logo -->
                         <div id="logo">
+							<!-- Hamburger Menu Icon -->
+				<div class="menu-icon" onclick="toggleMenu()">
+					&#9776; <!-- This is the "hamburger" icon -->
+				</div>
             
                             <h1><img src="images/Itothyalogo.png"></h1>
                         </div>
@@ -208,6 +212,17 @@
 			</div>
 
 		<!-- Scripts -->
+		<script>
+			// JavaScript to toggle the navigation on small screens
+			function toggleMenu() {
+				var nav = document.getElementById("nav");
+				if (nav.style.display === "block") {
+					nav.style.display = "none";
+				} else {
+					nav.style.display = "block";
+				}
+			}
+		</script>
 
 			
 			<script src="assets/js/util.js"></script>
